@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+
+:root {
+  --violet: hsl(257, 40%, 49%);
+  --soft-magenta: hsl(300, 69%, 65%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--violet);
+  color: white;
+  background-image: url("./images/bg-desktop.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+}
+
+main {
+  margin: 50px;
+}
+
+header img {
+  width: 200px;
+  margin-bottom: 50px;
+}
+
+header img:hover {
+  scale: 1.1;
+}
+
+content {
+  width: 90%;
+  max-width: 1300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.mockups img {
+  max-width: 700px;
+}
+
+.info {
+  padding: 0 60px;
+}
+
+h1.title {
+  font-size: 2.4rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+p.desc {
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+button.register {
+  border: none;
+  border-radius: 25px;
+  width: 35%;
+  color: var(--violet);
+  font-weight: 600;
+  background-color: white;
+  padding: 15px 25px;
+  box-shadow: 0 8px 17px -8px black;
+  cursor: pointer;
+}
+
+button.register:hover {
+  color: white;
+  animation: moveButton 2s ease-in-out forwards;
+  background: var(--soft-magenta);
+}
+
+@keyframes moveButton {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(50px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+footer {
+  float: right;
+}
+
+i {
+  cursor: pointer;
+  text-align: center;
+  width: 40px;
+  border: 1px white solid;
+  border-radius: 50%;
+  padding: 10px;
+  margin: 5px;
+}
+
+i:hover {
+  background-color: white;
+  color: var(--violet);
+  transform: translateY(-5px);
+}
+
+@media screen and (max-width: 1300px) {
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  content {
+    margin: 0 auto;
+    width: 70%;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    text-align: center;
+  }
+
+  footer {
+    margin: 40px 0;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 757px) {
+  body {
+    overflow: auto;
+    background-image: url("./images/bg-mobile.svg");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    margin: 10px auto;
+  }
+
+  main {
+    margin: 35px;
+  }
+
+  content {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  header img {
+    width: 150px;
+    float: left;
+    margin-bottom: 40px;
+  }
+
+  .mockups img {
+    width: 320px;
+  }
+
+  .info {
+    padding: 10px;
+  }
+
+  h1.title {
+    font-size: 1.5rem;
+  }
+
+  p.desc {
+    font-size: 0.95rem;
+  }
+
+  button.register {
+    width: 75%;
+  }
+
+  footer {
+    padding-bottom: 30px;
+  }
+}
